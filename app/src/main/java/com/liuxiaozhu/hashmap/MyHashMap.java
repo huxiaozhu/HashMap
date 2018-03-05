@@ -38,7 +38,9 @@ public class MyHashMap<K, V> {
         }
         threshold = tableSizeFor(initialCapacity);
     }
-
+    /**
+    * 这个方法可以保证在计算hash值的时候碰撞的概率小
+    */
     final int tableSizeFor(int cap) {
         int n = cap - 1;
         n |= n >>> 1;
